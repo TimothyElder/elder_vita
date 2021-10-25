@@ -1,0 +1,269 @@
+% !TEX TS-program = XeLaTeX
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Timothy Elder <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements that are included in a modern tex distribution:
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+
+
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%% memoir.cls
+%%% fontawesome.sty
+%%%
+%%%
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements from https://github.com/kjhealy/latex-custom-kjh
+%%% ------------------------------------------------------------------------
+%%% org-preamble-xelatex.sty
+%%% memoir-article-styles.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medksip,
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+\documentclass[11pt,article,oneside]{memoir}
+\usepackage{org-preamble-xelatex}
+%%\usepackage{fontawesome,url}
+
+
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{Timothy Elder}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{University of Chicago}
+\def\myaddress{Department of Sociology}
+\def\myemail{timothyelder@uchicago.edu}
+\def\myphone{(740) 913-1219}
+\def\myversion{}
+\def\myrevision{}
+
+
+\def\myaffiliation{University of Chicago}
+\def\myauthor{Timothy Elder}
+\date{} % not used (revision control instead)
+\def\mykeywords{Timothy, Elder, Timothy Elder, Vita, CV, Resume, Sociology}
+
+%%%------------------------------------------------------------------------
+%%% Git version tracking
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe.
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},
+	Numbers={OldStyle},
+	Ligatures={Common}]{Times New Roman}
+\setsansfont[Mapping=tex-text,
+	Ligatures={Common},
+	Colour=AA0000]{Arial}
+\setmonofont[Mapping=tex-text,Scale=0.72]{Arial}
+
+\newfontface\scheader[SmallCapsFont={Arial},SmallCapsFeatures={Letters=SmallCaps}]{Arial}
+
+\newfontface\addressblock[Mapping={tex-text},
+	Numbers={OldStyle},
+	Ligatures={Common}]{Arial}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+
+%% [optional] custom ampersand (font consistent with the one chosen above)
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+\pagestyle{kjh}
+%\thispagestyle{kjhgit}
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+ \flushright {\footnotesize
+ \href{https://sociology.uchicago.edu/}{Department of Sociology}, \\ University of Chicago, \\ \vspace{-0.05in} Chicago, \textsc{IL} 60637.}
+
+\end{minipage}
+\hfill
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.3in}
+  \flushright \footnotesize  \addressblock \myphone \, \faPhone \\
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+\end{minipage}
+
+\medskip
+
+%% Name
+\noindent{\LARGE\scheader \textsc{Timothy Elder}}
+\reversemarginpar
+
+\bigskip
+
+
+
+%% Education
+
+\marginhead{\sffamily {{\vskip -0.23em} education}}
+
+\ind Ph.D, Sociology, University of Chicago, \emph{In progress}.
+
+%\ind \hspace{0.35in} \footnotesize Dissertation: \emph{Exchange in Blood and Organs}.\newline Winner, American Sociological Association's Dissertation Award.\normalsize \vspace{0.05in}
+
+\ind M.A., Sociology, University of Chicago, 2018.
+
+\ind B.A., \emph{Cum Laude}, Philosophy and Sociology, Kent State University, 2016.
+
+\bigskip
+
+%% Teaching
+\marginhead{\sffamily {\vskip 0.6em}teaching}
+\medskip
+\noindent\emph{University of Chicago \vspace{0.01in}}
+
+\ind Teaching Assistant, \underline{Maverick Markets}. Spring 2020.
+
+\ind Teaching Assistant, \underline{Social, Structure, and Change}. Winter 2020.
+
+\ind Teaching Assistant, \underline{Urban Policy Analysis}. Autumn 2020.
+
+\ind Teaching Assistant, \underline{Sociology of Human Sexuality}. Spring 2020.
+
+\ind Teaching Intern, \underline{Power, Identity, and Resistance}. Autumn and Winter 2018-19
+
+\bigskip
+
+%% Research
+\marginhead{\sffamily {\vskip 0.35em} research}
+\medskip
+\noindent\emph{University of Chicago \vspace{0.01in}}
+
+\ind Course Development, \underline{Invitation to Sociology}, 2018-19 \vspace{0.05in}
+
+\medskip
+\noindent\emph{Kent State University \vspace{0.01in}}
+
+\ind Research Assistant, Group Processes Laboratory, 2015-16 \vspace{0.05in}
+
+\normalsize
+
+%% Presentations
+\marginhead{\sffamily {\vskip 0.35em} presentations}
+\bigskip
+
+\ind 'Breaking Boundary Objects: The Scientific Investigation of Unidentified Flying Objects in the 20th Century'. \emph{Politics, History and Society Workshop}, \vspace{0.05in}
+
+\ind “An Empirical Investigation of Privacy: The Impact of Multiple Levels of Trust". \emph{ASA 2015 Chicago, IL}. Roundtable.
+
+\ind “An Empirical Perspective on Altman’s Theory of Privacy.” \emph{North Central Sociological Association 2015 Cleveland, OH}.
+
+\normalsize
+
+%% Service
+\bigskip
+\marginhead{\sffamily {\vskip 0.35em} service}
+\medskip
+
+\ind Student Coordinator, \emph{Social Theory and Evidence Workshop}. 2018-2019
+
+\ind Student Coordinator, \emph{UChicago Sociology Colloquium}. 2018-2019
+
+\ind Chair, \emph{Society for Social Research}. 2018-2019
+
+\ind Manuscript Board, \emph{American Journal of Sociology}, 2018-2019}
+
+\ind Reviewer, \emph{American Journal of Sociology, Sexuality \& Culture}
+
+
+%% Professional Membersip
+\bigskip
+\marginhead{\sffamily {\vskip 0.35em} professional \newline membership}
+\medskip
+
+\ind \emph{American Sociological Association}. 2015-Present
+
+\ind \emph{Midwest Sociological Society}. 2019-Present
+
+
+
+%\newpage
+\bigskip
+
+\marginhead{\sffamily {\vskip 0.35em} programming languages}
+\medskip
+
+\ind  Python \hspace{0.4in}  R
+
+\newline \noindent Stata
+
+
+\end{document}
