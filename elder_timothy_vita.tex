@@ -1,39 +1,12 @@
 % !TEX TS-program = XeLaTeX
 %%% A template to produce a nice-looking Curriculum Vitae.
-%%% Timothy Elder <kjhealy@gmail.com>
+%%% Kieran Healy <kjhealy@gmail.com>
 %%% Most recent version is at http://kjhealy.github.com/kjh-vita
-%%%
-%%% ------------------------------------------------------------------------
-%%% Requirements that are included in a modern tex distribution:
-%%% ------------------------------------------------------------------------
-%%% xelatex
-%%% fontspec.sty
-%%% hyperrref.sty
-
-
-%%% xunicode.sty
-%%% color.sty
-%%% url.sty
-%%% fancyhdr.sty
-%%% memoir.cls
-%%% fontawesome.sty
-%%%
-%%%
-%%%
 %%% ------------------------------------------------------------------------
 %%% Requirements from https://github.com/kjhealy/latex-custom-kjh
 %%% ------------------------------------------------------------------------
 %%% org-preamble-xelatex.sty
 %%% memoir-article-styles.sty
-%%%
-%%% ------------------------------------------------------------------------
-%%% Optional
-%%% ------------------------------------------------------------------------
-%%% git
-%%% vc.sty
-%%% revnum.sty
-%%% Fonts
-%%%
 %%% ------------------------------------------------------------------------
 %%% Note
 %%%------------------------------------------------------------------------
@@ -44,9 +17,10 @@
 %%%------------------------------------------------------------------------
 \documentclass[11pt,article,oneside]{memoir}
 \usepackage{org-preamble-xelatex}
-\usepackage{fontawesome}
+\usepackage{fontspec}
 \usepackage{url}
 
+\usepackage{fontawesome5}
 
 
 %%%------------------------------------------------------------------------
@@ -66,6 +40,7 @@
 \def\myaddress{Department of Sociology}
 \def\myemail{timothyelder@uchicago.edu}
 \def\myphone{(740) 913-1219}
+\def\myweb{timothyelder.com}
 \def\myversion{}
 \def\myrevision{}
 
@@ -81,7 +56,7 @@
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
-\input{vc}
+% \input{vc}
 
 %%%------------------------------------------------------------------------
 %%% Document
@@ -92,20 +67,22 @@
 %% Minion and Myriad are widely available, from Adobe.
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
 %% and is worth every penny. Any good monospace font will work fine, though.
-%% Consolas or inconsolata are good alternatives.
+%% Consolas or Inconsolata are good alternatives.
 \setromanfont[Mapping={tex-text},
 	Numbers={OldStyle},
-	Ligatures={Common}]{Times New Roman}
+	Ligatures={Common}]{Minion Pro}
+
 \setsansfont[Mapping=tex-text,
 	Ligatures={Common},
-	Colour=AA0000]{Arial}
-\setmonofont[Mapping=tex-text,Scale=0.72]{Arial}
+	Colour=018DE9]{inconsolata}
 
-\newfontface\scheader[SmallCapsFont={Arial},SmallCapsFeatures={Letters=SmallCaps}]{Arial}
+\setmonofont[Mapping=tex-text,Scale=0.72]{inconsolata}
+
+\newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
 
 \newfontface\addressblock[Mapping={tex-text},
 	Numbers={OldStyle},
-	Ligatures={Common}]{Arial}
+	Ligatures={Common}]{Minion Pro Medium Caption}
 
 
 %%%------------------------------------------------------------------------
@@ -128,7 +105,7 @@
 
 %% Custom hanging indent for vita items
 \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
-%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\ind{\hangindent=18pt\hangafter=1 \noindent}
 \def\labelitemi{~}
 \renewcommand{\labelitemii}{~}
 
@@ -148,7 +125,7 @@
 %%%------------------------------------------------------------------------
 \begin{minipage}[t]{2.95in}
  \flushright {\footnotesize
- \href{https://sociology.uchicago.edu/}{Department of Sociology}, \\ University of Chicago, \\ \vspace{-0.05in} Chicago, \textsc{IL} 60637.}
+ \href{https://sociology.uchicago.edu/}{Department of Sociology} \\ University of Chicago \\ \vspace{-0.05in} Chicago, \textsc{IL} 60637}
 
 \end{minipage}
 \hfill
@@ -156,32 +133,32 @@
 % dummy (needed here)
 %\end{minipage}
 \hfill
-\begin{minipage}[t]{1.3in}
-  \flushright \footnotesize  \addressblock \myphone \, \faPhone \\
-  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+\begin{minipage}[t]{1.5in}
+  \flushright \footnotesize  \addressblock
+  {\scriptsize  \texttt{\href{http://timothyelder.com/}{\myweb}}} \faIcon{globe-americas} \\
+  {\scriptsize  \texttt{\href{https://github.com/timothyelder}{github.com/timothyelder} \faIcon{github}} \\
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} \faIcon{envelope}}}
 \end{minipage}
 
 \medskip
 
 %% Name
-\noindent{\LARGE\scheader \textsc{Timothy Elder}}
+\noindent{\LARGE\scheader \textsc{TIMOTHY ELDER}}
 \reversemarginpar
 
 \bigskip
-
-
 
 %% Education
 
 \marginhead{\sffamily {{\vskip -0.23em} education}}
 
-\ind Ph.D, Sociology, University of Chicago, \emph{In progress}.
+\ind PhD, Sociology, University of Chicago, \emph{In progress}.
 
 %\ind \hspace{0.35in} \footnotesize Dissertation: \emph{Exchange in Blood and Organs}.\newline Winner, American Sociological Association's Dissertation Award.\normalsize \vspace{0.05in}
 
-\ind M.A., Sociology, University of Chicago, 2018.
+\ind MA, Sociology, University of Chicago, 2018.
 
-\ind B.A., \emph{Cum Laude}, Philosophy and Sociology, Kent State University, 2016.
+\ind BA, \emph{Cum Laude}, Philosophy and Sociology, Kent State University, 2016.
 
 \bigskip
 
@@ -190,15 +167,17 @@
 \medskip
 \noindent\emph{University of Chicago \vspace{0.01in}}
 
+\ind Teaching Assistant, \underline{Invitation to Sociology}. Spring 2022.
+
 \ind Teaching Assistant, \underline{Maverick Markets}. Spring 2020.
 
 \ind Teaching Assistant, \underline{Social, Structure, and Change}. Winter 2020.
 
-\ind Teaching Assistant, \underline{Urban Policy Analysis}. Autumn 2020.
+\ind Teaching Assistant, \underline{Urban Policy Analysis}. Autumn 2019.
 
 \ind Teaching Assistant, \underline{Sociology of Human Sexuality}. Spring 2020.
 
-\ind Teaching Intern, \underline{Power, Identity, and Resistance}. Autumn and Winter 2018-19
+\ind Teaching Intern, \underline{Power, Identity, and Resistance}. Autumn and Winter 2018-2019.
 
 \bigskip
 
@@ -207,63 +186,65 @@
 \medskip
 \noindent\emph{University of Chicago \vspace{0.01in}}
 
-\ind Course Development, \underline{Invitation to Sociology}, 2018-19 \vspace{0.05in}
+\ind Research Assistant, Ensago-Networks Project, Sumer and Autumn 2021. \vspace{0.05in}
 
-\medskip
+\ind Course Development, \underline{Invitation to Sociology}, 2018-2019. \vspace{0.05in}
+
+\smallskip
 \noindent\emph{Kent State University \vspace{0.01in}}
 
-\ind Research Assistant, Group Processes Laboratory, 2015-16 \vspace{0.05in}
+\ind Research Assistant, Group Processes Laboratory, 2015-2016. \vspace{0.05in}
 
 \normalsize
 
 %% Presentations
 \marginhead{\sffamily {\vskip 0.35em} presentations}
-\bigskip
+\medskip
 
-\ind 'Breaking Boundary Objects: The Scientific Investigation of Unidentified Flying Objects in the 20th Century'. \emph{Politics, History and Society Workshop}, \vspace{0.05in}
+\ind ``Managing Consensus and Dissensus in Palliative Medicine". \emph{Medicine and Its Objects Workshop}, University of Chicago, Autumn 2021. \vspace{0.05in}
 
-\ind “An Empirical Investigation of Privacy: The Impact of Multiple Levels of Trust". \emph{ASA 2015 Chicago, IL}. Roundtable.
+\ind ``Breaking Boundary Objects: The Scientific Investigation of Unidentified Flying Objects in the 20th Century". \emph{Politics, History and Society Workshop}, University of Chicago,  Autumn 2018. \vspace{0.05in}
+
+\ind “An Empirical Investigation of Privacy: The Impact of Multiple Levels of Trust". \emph{ASA 2015 Chicago, IL}. Roundtable. \vspace{0.05in}
 
 \ind “An Empirical Perspective on Altman’s Theory of Privacy.” \emph{North Central Sociological Association 2015 Cleveland, OH}.
 
 \normalsize
 
 %% Service
-\bigskip
+\medskip
 \marginhead{\sffamily {\vskip 0.35em} service}
 \medskip
 
-\ind Student Coordinator, \emph{Social Theory and Evidence Workshop}. 2018-2019
+\ind Book Review Board, \emph{American Journal of Sociology}, 2021-2022.
 
-\ind Student Coordinator, \emph{UChicago Sociology Colloquium}. 2018-2019
+\ind Manuscript Board, \emph{American Journal of Sociology}, 2018-2019.
 
-\ind Chair, \emph{Society for Social Research}. 2018-2019
+\ind Student Coordinator, \emph{Social Theory and Evidence Workshop}, 2018-2019.
 
-\ind Manuscript Board, \emph{American Journal of Sociology}, 2018-2019}
+\ind Student Coordinator, \emph{UChicago Sociology Colloquium}, 2018-2019.
+
+\ind Co-Chair, \emph{Society for Social Research}, 2018-2019.
 
 \ind Reviewer, \emph{American Journal of Sociology, Sexuality \& Culture}
 
 
+\newpage
 %% Professional Membersip
-\bigskip
+\medskip
 \marginhead{\sffamily {\vskip 0.35em} professional \newline membership}
 \medskip
 
-\ind \emph{American Sociological Association}. 2015-Present
+\ind \emph{American Sociological Association}. 2015-Present.
 
-\ind \emph{Midwest Sociological Society}. 2019-Present
+\ind \emph{Midwest Sociological Society}. 2019-Present.
 
+\ind \emph{American Academy of Hospice and Palliative Medicine}. 2021-Present.
 
-
-%\newpage
-\bigskip
-
+\medskip
 \marginhead{\sffamily {\vskip 0.35em} programming languages}
 \medskip
 
-\ind  Python \hspace{0.4in}  R
-
-\newline \noindent Stata
-
+\ind  \texttt{Python} \hspace{0.4in}  \texttt{R} \hspace{0.4in}
 
 \end{document}
