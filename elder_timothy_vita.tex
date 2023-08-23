@@ -56,7 +56,7 @@
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
-% \input{vc}
+\input{vc}
 
 %%%------------------------------------------------------------------------
 %%% Document
@@ -70,7 +70,7 @@
 %% Consolas or Iosevka are good alternatives.
 \setromanfont[Mapping={tex-text},
 	Numbers={OldStyle},
-	Ligatures={Common}]{Minion Pro}
+	Ligatures={Common}]{Cardo}
 
 \setsansfont[Mapping=tex-text,
 	Ligatures={Common},
@@ -78,11 +78,11 @@
 
 \setmonofont[Mapping=tex-text,Scale=0.72]{Iosevka}
 
-\newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
+\newfontface\scheader[SmallCapsFont={Cardo},SmallCapsFeatures={Letters=SmallCaps}]{Cardo}
 
 \newfontface\addressblock[Mapping={tex-text},
 	Numbers={OldStyle},
-	Ligatures={Common}]{Minion Pro Medium Caption}
+	Ligatures={Common}]{Cardo}
 
 
 %%%------------------------------------------------------------------------
@@ -116,8 +116,8 @@
 % These lines will insert git revision info in the footer, using the vc
 % package---see docs for vc package for details. Comment out this line
 % if you're not using vc, and also remove the \input{vc} line above.
-\pagestyle{kjh}
-%\thispagestyle{kjhgit}
+% \pagestyle{kjh}
+\thispagestyle{kjhgit}
 
 
 %%%------------------------------------------------------------------------
@@ -143,18 +143,18 @@
 \medskip
 
 %% Name
-\noindent{\LARGE\scheader \textsc{TIMOTHY ELDER}}
+\noindent{\LARGE\scheader \textsc{TIMOTHY B. ELDER}}
 \reversemarginpar
 
 \bigskip
 
 %% Education
 
-\marginhead{\sffamily {{\vskip -0.23em} education}}
+\marginhead{\sffamily {{\vskip -6pt} education}}
 
 \ind PhD, Sociology, University of Chicago, \emph{In progress}.
 
-\ind \hspace{0.35in} \footnotesize Dissertation: \emph{Winning at a Losing Game: Divergent Ontologies and Shared Practices in Medicine}. \normalsize \vspace{0.05in}
+\ind \hspace{0.35in} \footnotesize Dissertation: \emph{Winning at a Losing Game: Divergent Ontologies and Shared Practices in Medicine}. \normalsize \vskip 0.23em
 
 \ind MA, Sociology, University of Chicago, 2018.
 
@@ -165,7 +165,7 @@
 %% Working Papers
 \marginhead{\sffamily working\newline papers}
 
-\ind Elder, Timothy B. and Austin C. Kozlowski. “Status and Subfield: The Distribution of Sociological Specializations across Departments” \vspace{0.05in}
+\ind Elder, Timothy B. and Austin C. Kozlowski. ``Status and Subfield: The Distribution of Sociological Specializations across Departments.'' doi: \texttt{\href{https://osf.io/preprints/socarxiv/h85tp/}{10.31235/osf.io/h85tp}} {\vskip 5pt}
 
 \ind Elder, Timothy B. ``Interdependence and Difference: Niche Construction and the Study of Medicine'' \vspace{0.05in}
 
@@ -174,7 +174,7 @@
 \bigskip
 
 %% Teaching
-\marginhead{\sffamily {\vskip 0.6em}teaching}
+\marginhead{\sffamily {\vskip 0.6em} teaching}
 \medskip
 \noindent\emph{University of Chicago \vspace{0.01in}}
 
@@ -188,7 +188,7 @@
 
 \ind Teaching Assistant, \underline{Sociology of Human Sexuality}. Spring 2020.
 
-\ind Teaching Intern, \underline{Power, Identity, and Resistance}. Autumn and Winter 2018-2019.
+\ind Teaching Intern, \underline{Power, Identity, and Resistance}. \\ Autumn and Winter 2018-2019.
 
 \bigskip
 
@@ -211,8 +211,10 @@
 \bigskip
 
 %% Presentations
-\marginhead{\sffamily {\vskip -0.35em} presentations}
+\marginhead{\sffamily {\vskip -10pt} presentations}
 \medskip
+
+\ind ``The Ratlines --- Clandestine Networks and Nazi Fugitives at the End of the Second World War'' with Hanock A. Spitzer, \emph{American Sociological Association Annual Meeting 2023 Philadelphia, PA}, Regular Session Historical Sociology. \vspace{0.05in}
 
 \ind ``Intra-Professional Collaboration in the Hospital'', \emph{Chicago Ethnography Conference} Loyola University, Chicago. April 2023. \vspace{0.05in}
 
@@ -226,7 +228,7 @@
 
 \ind ``Breaking Boundary Objects: The Scientific Investigation of Unidentified Flying Objects in the 20th Century''. \emph{Politics, History and Society Workshop}, University of Chicago,  Autumn 2018. \vspace{0.05in}
 
-\ind ``An Empirical Investigation of Privacy: The Impact of Multiple Levels of Trust''. \emph{American Sociological Association Annual Meeting 2015 Chicago, IL}. Roundtable. \vspace{0.05in}
+\ind ``An Empirical Investigation of Privacy: The Impact of Multiple Levels of Trust''. \emph{American Sociological Association Annual Meeting 2015 Chicago, IL}. Roundtable. {\vskip 5pt}
 
 \ind ``An Empirical Perspective on Altman's Theory of Privacy.'' \emph{North Central Sociological Association 2015 Cleveland, OH}.
 
@@ -269,5 +271,21 @@
 \medskip
 
 \ind  \texttt{Python} \hspace{0.4in}  \texttt{R} \hspace{0.4in}
+
+%% Professional Membership
+\medskip
+\marginhead{\sffamily {\vskip 0.35em} research \newline interests}
+\medskip
+
+\vskip 16pt
+
+\noindent\begin{minipage}{\textwidth}
+	\begin{minipage}{0.5\textwidth}
+	Sociology of Medicine \\ Social Network Analysis \\ Organizations
+	\end{minipage}\hfill
+	\begin{minipage}{0.5\textwidth}
+	Qualitative Methods \\ Social Theory \\ Death and Dying
+	\end{minipage}%
+\end{minipage}
 
 \end{document}
