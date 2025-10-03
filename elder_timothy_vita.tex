@@ -20,6 +20,8 @@
 \usepackage{fontspec}
 \usepackage{url}
 
+% \usepackage[none]{hyphenat} % suppress words breaking across lines
+
 \usepackage{fontawesome5}
 
 \addbibresource{/Users/timothyelder/Documents/bibs/socbib-pandoc.bib}
@@ -67,6 +69,8 @@
 %%% Document
 %%%------------------------------------------------------------------------
 \begin{document}
+
+\raggedright
 
 \setromanfont[Mapping={tex-text},
 	Numbers={OldStyle},
@@ -179,17 +183,35 @@
 
 \bigskip
 
+%%%%%%%%%%%
+%% Books %%
+%%%%%%%%%%%
+\marginhead{\sffamily {{\vskip -6pt}books}}
+
+\ind \textit{Winning at a Losing Game: Medicine's Challenge in Caring for the Dying}\\
+\strut\hspace{0.4in} \footnotesize \textbf{In Preparation}\normalsize \\\vspace{0.1in}
+
+\ind \textit{Introduction to PlainText for Research \& Writing: Open Workflows for Reproducible Scholarship}\\
+\strut\hspace{0.4in} \footnotesize \textbf{In Preparation}\\\vspace{0.1in}
+
+\medskip
+
 %%%%%%%%%%%%
 %% Papers %%
 %%%%%%%%%%%%
 \marginhead{\sffamily {{\vskip -6pt}papers}}
 
-\ind \fullcite{elder_status_2025} \\
+\normalsize
+
+\ind \fullcite{elder_status_2025} \\\vspace{0.1in}
 
 \ind Timothy B. Elder ``The Operation was Successful and the Patient Died: Good Practice and Bad Results in the Care of the Dying'' \\
-	\strut\hspace{0.4in} \footnotesize \textbf{Revise and Resubmit} at \textit{Qualitative Sociology} \normalsize \\
+	\strut\hspace{0.4in} \footnotesize \textbf{Forthcoming} at \textit{Qualitative Sociology} \normalsize \\\vspace{0.1in}
 
-\bigskip
+\ind Timothy B. Elder ``Ambiguity at the End of Life: The Breakdown of Clinical Heuristics in Serious Illness'' \\
+	\strut\hspace{0.4in} \footnotesize \textbf{Under Review} at \textit{Sociology of Health and Illness} \normalsize \\\vspace{0.1in}
+
+\medskip
 
 %%%%%%%%%%%%%%%%%%%%
 %% Working Papers %%
@@ -199,8 +221,7 @@
 \ind Timothy B. Elder ``Discourse of Data and Talk of Values: Integrating Patient-Clinician Decision-Making in End-of-Life Care'' \\
 	% \strut\hspace{0.4in} \footnotesize \textbf{Under Review} at \textit{Sociological Forum} \normalsize \\
 
-\ind Timothy B. Elder ``Ambiguity at the End of Life: The Role of Hospice and Palliative Medicine Clinicians in Reorienting Decision-Making'' \\
-	% \strut\hspace{0.4in} \footnotesize \textbf{Under Review} at \textit{Social Science and Medicine} \normalsize \\
+\newpage
 
 %%%%%%%%%%%%%%
 %% Teaching %%
@@ -208,11 +229,11 @@
 \marginhead{\sffamily {\vskip 0.6em} teaching}
 \medskip
 
-% \noindent\emph{Dartmouth College \vspace{0.01in}}
+\noindent\emph{Dartmouth College \vspace{0.01in}}
 
-% \ind Instructor, \underline{Medical Sociology}. Winter 2025.\vspace{0.05in}
+\ind Lecturer, \underline{Medical Sociology}. Winter 2026.\vspace{0.05in}
 
-% \medskip
+\medskip
 \noindent\emph{University of Chicago \vspace{0.01in}}
 
 \ind Teaching Assistant, \underline{Invitation to Sociology}. Spring 2022.
@@ -226,9 +247,6 @@
 \ind Teaching Assistant, \underline{Sociology of Human Sexuality}. Spring 2020.
 
 \ind Teaching Intern, \underline{Power, Identity, and Resistance}. Autumn and Winter 2018-2019.
-
-\bigskip
-\newpage
 
 %%%%%%%%%%%%%%
 %% Research %%
@@ -378,12 +396,12 @@
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}
-	Stefan Timmermans \\
-	Professor of Sociology \\
-	University of California, LA \\
-	375 Portola Plaza \\
-	Los Angeles, CA 90095 \\
-	\texttt{\href{mailto:stefan@soc.ucla.edu}{stefan@soc.ucla.edu}}
+	Genevra Murray \\
+	Asst. Professor of Public Health \\
+	New York University\\
+	708 Broadway\\
+	New York, NY, 10003\\
+	\texttt{\href{mailto:genevra.murray@nyu.edu}{genevra.murray@nyu.edu}}
 \end{minipage}
 
 \end{document}
